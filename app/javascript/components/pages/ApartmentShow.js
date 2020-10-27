@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { Button, Card, CardTitle, Col, Row } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 
 class ApartmentShow extends Component{
   constructor(props){
@@ -11,14 +12,9 @@ class ApartmentShow extends Component{
     }
   }
 
-  handleClick = (e) => {
-    this.props.deleteApt(this.props.apartment.id);
-  }
-
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.deleteApt(this.props.apartment.id)
-    // console.log("deleteApt:",this.props.deleteApt );
+    this.props.deleteApt(this.props.apartment.id);
     this.setState({ success: true })
   }
 
@@ -62,7 +58,7 @@ class ApartmentShow extends Component{
                       <NavLink to = {`/edit/${this.props.apartment.id}`}>
                         <Button>Edit Apartment</Button>
                       </NavLink>
-                      <Button onClick = {this.handleClick}>
+                      <Button onClick = {this.handleSubmit}>
                         Delete Apartment
                       </Button>
                     </>
@@ -72,6 +68,7 @@ class ApartmentShow extends Component{
               </Card>
             </Col>
         </Row>
+        { this.state.success && <Redirect to="/myapts"/>}
       </React.Fragment>
     )
   }

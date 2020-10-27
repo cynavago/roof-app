@@ -7,6 +7,7 @@ import ApartmentShow from './pages/ApartmentShow'
 import ApartmentNew from './pages/ApartmentNew'
 import MyApartments from './pages/MyApartments'
 import ApartmentEdit from './pages/ApartmentEdit'
+import NotFound from './pages/NotFound'
 import {
   BrowserRouter as Router,
   Route,
@@ -95,15 +96,14 @@ class App extends React.Component {
 
   // Delete an apartment method
   deleteApt = (id) => {
-    return fetch(`/apartments/${id}`, {
-      headers: { "Content-Type": "application/json" },
+    return fetch (`/apartments/${id}`, {
+      headers: {"Content-Type": "application/json"},
       method: "DELETE"
     })
     .then(response => {
-      if(response.status === 200){
+      if(response.status === 200) {
         this.componentDidMount()
       }
-      console.log("response:", response.status);
       return response
     })
     .catch(errors => {
@@ -158,12 +158,14 @@ class App extends React.Component {
               return (
                 <ApartmentShow 
                   apartment={ apartment } 
+                  deleteApt = { this.deleteApt }
                   logged_in={ logged_in }
                   current_user= { current_user }
                 />
               )
             }}
           />
+
           <Route 
               path="/new"
               render={ (props) => 
@@ -202,23 +204,7 @@ class App extends React.Component {
               }}
             />
           }
-          { logged_in &&
-            <Route
-              path={"/show/:id"}
-              render={ (props) => {
-                let id = props.match.params.id
-                let apartment = this.state.apartments.find(apartment => apartment.id === parseInt(id))
-                return (
-                  <ApartmentShow 
-                    apartment={ apartment } 
-                    deleteApt = { this.deleteApt }
-                    logged_in={ logged_in }
-                    current_user= { current_user }
-                  />
-                )
-              }}
-            />
-          }
+        <Route component= { NotFound }/>
         </Switch>
         <Footer
           logged_in={ this.props.logged_in }
@@ -232,3 +218,4 @@ class App extends React.Component {
 }
 
 export default App
+

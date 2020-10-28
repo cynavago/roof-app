@@ -12,10 +12,11 @@ class ApartmentShow extends Component{
     }
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault()
+  handleClick = (e) => {
+    // e.preventDefault()
     this.props.deleteApt(this.props.apartment.id);
     this.setState({ success: true })
+    console.log("Apartment deleted")
   }
 
   render(){
@@ -58,7 +59,7 @@ class ApartmentShow extends Component{
                       <NavLink to = {`/edit/${this.props.apartment.id}`}>
                         <Button>Edit Apartment</Button>
                       </NavLink>
-                      <Button onClick = {this.handleSubmit}>
+                      <Button onClick = {this.handleClick}>
                         Delete Apartment
                       </Button>
                     </>

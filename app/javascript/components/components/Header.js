@@ -9,8 +9,8 @@ import {
     Nav,
     NavItem
   } from 'reactstrap';
-  
 import { NavLink } from 'react-router-dom'
+// import '../../assets/stylesheets/header.scss'
 
 class Header extends Component{
     constructor(props){
@@ -27,7 +27,7 @@ class Header extends Component{
     render(){
         return(
             <React.Fragment>
-                <Jumbotron fluid>
+                <Jumbotron fluid className="hero">
                     <Container fluid>
                         <h1 className="display-3">Apartment App</h1>
                         <p className="lead">Find your next home.</p>

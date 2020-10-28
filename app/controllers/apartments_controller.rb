@@ -20,8 +20,9 @@ class ApartmentsController < ApplicationController
     end
 
     def destroy
-        @apartment = Apartment.find(params[:id])
-        @apartment.destroy
+        apartment = Apartment.find(params[:id])
+        apartment.destroy
+        redirect_to apartments_path
     end
     
     private

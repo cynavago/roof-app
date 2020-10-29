@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
+import Header from '../components/Header'
+import Services from '../components/Services'
+import TopListings from '../components/TopListings'
 
 class Home extends Component{
     render(){
         return(
             <React.Fragment>
-                <h1>This is the Homepage!</h1>
+                <Header/>
+                <Services/>
+                <br></br>
+                <br></br>
+                <br></br>
+                <TopListings/>
             </React.Fragment>
         )
     }

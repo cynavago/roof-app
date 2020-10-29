@@ -1,4 +1,5 @@
 import React from "react"
+import NavBar from './components/NavBar'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -121,8 +122,8 @@ class App extends React.Component {
   
     console.log("current_user:", current_user);
     return (
-      <Router>   
-        <Header
+      <Router>
+        <NavBar
           logged_in={ this.props.logged_in }
           sign_in_route={ this.props.sign_in_route }
           sign_up_route={ this.props.sign_up_route }

@@ -1,0 +1,80 @@
+.hero{
+    background-image: url("home-hero-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+
+.headline{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 5.5rem;
+    padding-left: 8%;
+    padding-top: 5%;
+    color: #35374B;
+}
+
+.sub-headline{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.7rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: #35374B;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #41C2E3;
+}
+
+.body-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    padding-left: 8%;
+    color: #000000;
+}
+
+.logo{
+    padding-left: 4%;
+}
+
+.hero-btn{
+    padding-left: 8%;
+}
+
+.nav-bg{
+    background-color: #35374B;
+}
+
+.hero-btn{
+    color: #41C2E3;
+    margin-top: 1%;
+}
+
+.footer{
+    background-color: #35374B;
+    padding: 2%;
+}
+
+.card-num{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    text-decoration: underline;
+    text-decoration-color: #41C2E3;
+    padding-left: 0;
+}
+
+.card-subtitle{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-left: 0;
+}
+
+.card-body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    left: 0;
+}

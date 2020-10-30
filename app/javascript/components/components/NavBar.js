@@ -10,8 +10,7 @@ import {
     NavItem
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom'
-import image from '../../../assets/images/smart-rental-logo-1.png'
-// import '../../assets/stylesheets/header.scss'
+import image from '../../../assets/images/roof-logo-1.png'
 
 class Header extends Component{
     constructor(props){

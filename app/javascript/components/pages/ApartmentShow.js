@@ -46,8 +46,6 @@ class ApartmentShow extends Component{
                   <p>Bedrooms: { apartment.bedrooms }</p>
                   <p>Bathrooms: { apartment.bathrooms }</p>
                   <p>Pets Allowed: { apartment.pets }</p>
-                  <p>User Id: { apartment.user_id }</p>
-
                   <NavLink to={"/index"}>
                     <Button color="secondary">
                       Back to All Apartments

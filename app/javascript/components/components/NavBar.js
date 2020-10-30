@@ -35,10 +35,10 @@ class Header extends Component{
                     <Collapse isOpen={ !this.state.collapsed } navbar>
                     <Nav navbar>
                         <NavItem>
-                            <NavLink to="/">All Apartments</NavLink>
-                            </NavItem>
+                            <NavLink to="/">Home</NavLink>
+                        </NavItem>
                             <NavItem>
-                            <NavLink to="/index">Add Apartments</NavLink>
+                            <NavLink to="/index">All Apartments</NavLink>
                         </NavItem>
                         { this.props.logged_in &&
                         <>

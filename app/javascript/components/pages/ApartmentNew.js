@@ -23,7 +23,8 @@ class ApartmentNew extends Component{
                 price: "",
                 bedrooms: "",
                 bathrooms: "",
-                pets: ""
+                pets: "",
+                user_id: this.props.current_user.id
             },
             success: false
         }
@@ -55,82 +56,82 @@ class ApartmentNew extends Component{
                     <FormGroup>
                         <Label>Street</Label>
                         <Input
-                            type="text"
-                            name="street"
-                            onChange={ this.handleChange }
-                            value={ this.state.form.street }
+                        type="text"
+                        name="street"
+                        onChange={ this.handleChange }
+                        value={ this.state.form.street }
                         />
                     </FormGroup>
                     <FormGroup>
                         <Label>City</Label>
                         <Input
-                            type="text"
-                            name="city"
-                            onChange={ this.handleChange }
-                            value={ this.state.form.city }
+                        type="text"
+                        name="city"
+                        onChange={ this.handleChange }
+                        value={ this.state.form.city }
                         />
                     </FormGroup>
                     <FormGroup>
                         <Label>State</Label>
                         <Input
-                            type="text"
-                            name="state"
-                            onChange={ this.handleChange }
-                            value={ this.state.form.state }
+                        type="text"
+                        name="state"
+                        onChange={ this.handleChange }
+                        value={ this.state.form.state }
                         />
                     </FormGroup>
                     <FormGroup>
                         <Label>Manager</Label>
                         <Input
-                            type="text"
-                            name="manager"
-                            onChange={ this.handleChange }
-                            value={ this.state.form.manager }
+                        type="text"
+                        name="manager"
+                        onChange={ this.handleChange }
+                        value={ this.state.form.manager }
                         />
                     </FormGroup>
                     <FormGroup>
                         <Label>Email</Label>
                         <Input
-                            type="text"
-                            name="email"
-                            onChange={ this.handleChange }
-                            value={ this.state.form.email }
+                        type="text"
+                        name="email"
+                        onChange={ this.handleChange }
+                        value={ this.state.form.email }
                         />
                     </FormGroup>
                     <FormGroup>
                         <Label>Price</Label>
                         <Input
-                            type="text"
-                            name="price"
-                            onChange={ this.handleChange }
-                            value={ this.state.form.price }
+                        type="text"
+                        name="price"
+                        onChange={ this.handleChange }
+                        value={ this.state.form.price }
                         />
                     </FormGroup>
                     <FormGroup>
                         <Label>Bedrooms</Label>
                         <Input
-                            type="number"
-                            name="bedrooms"
-                            onChange={ this.handleChange }
-                            value={ this.state.form.bedrooms}
+                        type="number"
+                        name="bedrooms"
+                        onChange={ this.handleChange }
+                        value={ this.state.form.bedrooms}
                         />
                     </FormGroup>
                     <FormGroup>
                         <Label>Bathrooms</Label>
                         <Input
-                            type="number"
-                            name="bathrooms"
-                            onChange={ this.handleChange }
-                            value={ this.state.form.bathrooms }
+                        type="number"
+                        name="bathrooms"
+                        onChange={ this.handleChange }
+                        value={ this.state.form.bathrooms }
                         />
                     </FormGroup>
                     <FormGroup>
                         <Label>Pets</Label>
                         <Input
-                            type="text"
-                            name="pets"
-                            onChange={ this.handleChange }
-                            value={ this.state.form.pets }
+                        type="text"
+                        name="pets"
+                        onChange={ this.handleChange }
+                        value={ this.state.form.pets }
                         />
                     </FormGroup>
                     <Button
